@@ -1,20 +1,18 @@
-ble File  18 lines (17 sloc)  237 Bytes
-
 #include "main.h"
+#include <string.h>
+
 /**
- * _strchr - Entry point
- * @s: input
- * @c: input
- * Return: Always 0 (Success)
- */
+*_strchr- checks for a character in a string
+*@s:A pointer to the string checking for a character
+*@c: the checked character
+*
+*Return: A pointer a value or null
+*/
+
 char *_strchr(char *s, char c)
 {
-	int i = 0;
+	char *p = strchr(s, c);
 
-	for (; s[i] >= '\0'; i++)
-	{
-		if (s[i] == c)
-			return (&s[i]);
-	}
-	return (0);
+	s = p;
+	return (s);
 }
